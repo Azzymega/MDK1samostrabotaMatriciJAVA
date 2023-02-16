@@ -71,4 +71,16 @@ public class Matrix {
         }
         Numbers = Result;
     }
+
+    public static float[][] Multiplication(Matrix matrix, Matrix matrixs) {
+        float[][] Result = new float[matrix.Columns][matrix.Rows];
+        for (int x = 0; x < matrix.GetNumbers().length; x++) {
+            for (int y = 0; y < matrix.GetNumbers()[0].length; y++) {
+                for (int z = 0; z < matrix.GetNumbers().length; z++) {
+                    Result[x][y] += matrixs.GetNumbers()[x][z] * matrix.GetNumbers()[z][y];
+                }
+            }
+        }
+        return Result;
+    }
 }
