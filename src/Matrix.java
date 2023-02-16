@@ -24,6 +24,13 @@ public class Matrix {
             }
         }
     }
+    public void Addition(Matrix matrix, Matrix matrix) {
+        for (int x = 0; x < Rows; x++) {
+            for (int y = 0; y < Columns; y++) {
+                Numbers[x][y] = Numbers[x][y] + matrix.GetNumbers()[x][y];
+            }
+        }
+    }
 
     public void Substract(int number) {
         for (int x = 0; x < Rows; x++) {
@@ -31,6 +38,16 @@ public class Matrix {
                 Numbers[x][y] = Numbers[x][y] * number;
             }
         }
+    }
+
+    public static float[][] Substract(int number, Matrix matrix) {
+        float[][] Result = new float[matrix.Rows][matrix.Columns];
+        for (int x = 0; x < matrix.Rows; x++) {
+            for (int y = 0; y < matrix.Columns; y++) {
+                Result[x][y] = matrix.GetNumbers()[x][y] * number;
+            }
+        }
+        return Result;
     }
 
     public void PrintMatrix() {
