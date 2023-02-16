@@ -8,6 +8,11 @@ public class Matrix {
         Rows = r;
         Numbers = new float[r][c];
     }
+    public Matrix(float[][] num){
+        Numbers = num;
+        Columns = num[0].length;
+        Rows = num.length;
+    }
 
     public void SetNumber(int x, int y, int number) {
         Numbers[x][y] = number;
@@ -77,7 +82,7 @@ public class Matrix {
         for (int x = 0; x < matrix.GetNumbers().length; x++) {
             for (int y = 0; y < matrix.GetNumbers()[0].length; y++) {
                 for (int z = 0; z < matrix.GetNumbers().length; z++) {
-                    Result[x][y] += matrixs.GetNumbers()[x][z] * matrix.GetNumbers()[z][y];
+                    Result[x][y] += matrix.GetNumbers()[x][z] * matrixs.GetNumbers()[z][y];
                 }
             }
         }
