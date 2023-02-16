@@ -39,7 +39,7 @@ public class Matrix {
         return Result;
     }
 
-    public void Substract(int number) {
+    public void MultiplicationByNumber(int number) {
         for (int x = 0; x < Rows; x++) {
             for (int y = 0; y < Columns; y++) {
                 Numbers[x][y] = Numbers[x][y] * number;
@@ -47,7 +47,7 @@ public class Matrix {
         }
     }
 
-    public static float[][] Substract(int number, Matrix matrix) {
+    public static float[][] MultiplicationByNumber(int number, Matrix matrix) {
         float[][] Result = new float[matrix.Rows][matrix.Columns];
         for (int x = 0; x < matrix.Rows; x++) {
             for (int y = 0; y < matrix.Columns; y++) {
